@@ -1,0 +1,2 @@
+module PiletsHelper
+end

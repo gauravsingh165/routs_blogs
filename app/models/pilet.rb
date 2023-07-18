@@ -1,0 +1,2 @@
+class Pilet < ApplicationRecord
+end

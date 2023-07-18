@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Pilets</h1>
+
+<div id="pilets">
+  <% @pilets.each do |pilet| %>
+    <%= render pilet %>
+    <p>
+      <%= link_to "Show this pilet", pilet %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New pilet", new_pilet_path %>

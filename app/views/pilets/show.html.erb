@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @pilet %>
+
+<div>
+  <%= link_to "Edit this pilet", edit_pilet_path(@pilet) %> |
+  <%= link_to "Back to pilets", pilets_path %>
+
+  <%= button_to "Destroy this pilet", @pilet, method: :delete %>
+</div>
