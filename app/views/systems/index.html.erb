@@ -1,5 +1,6 @@
-<h1>Listing Systems</h1>
-<%= link_to 'New System',new_system_path%>
+<h1>Listing Systems</h1><br>
+<%= link_to 'New System', new_system_path, style: "color: red;" %>
+
 <style>
   table {
     border-collapse: collapse;
@@ -38,6 +39,7 @@
         <td><%= system.s_name %></td>
         <td><%= system.s_year %></td>
         <td><%= link_to 'view',system%></td>
+        <td><%= link_to 'edit',edit_system_path(system)%></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,6 +1,6 @@
-<h1>This is a form</h1>
-<%= link_to 'not create' ,systems_path %>
-<%= form_for @system do |form| %>
+<h1>This is a edit form</h1>
+
+<%= form_with model: @system do |form| %>
   <% if @system.errors.any? %>
     <% @system.errors.full_messages.each do |message| %>
       <p><%= message %></p>
@@ -21,3 +21,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+<%= link_to 'back' ,systems_path %>

@@ -17,10 +17,15 @@ class SystemsController < ApplicationController
       render :new
     end
   end
+ 
   def show 
     @system =System.find(params[:id])
  
    end 
+   def edit
+    @system =System.find(params[:id])
+ 
+   end
   # ...
 
   private
