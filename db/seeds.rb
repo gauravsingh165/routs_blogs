@@ -18,4 +18,7 @@ user  =User.create(
       age: "#{20+i}"
     )
   end
-  
+  system = System.create(
+    s_name:'microsoft',
+    s_year: '1994'
+  )

@@ -1,0 +1,40 @@
+
+<style>
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 2px solid green;
+    padding: 8px;
+  }
+
+  th {
+    background-color: lightgray;
+  }
+  h1 {
+    color: blue;
+  }
+
+  p {
+    color: red;
+  }
+</style>
+
+<h1>Listing Systems</h1>
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @systems.each do |system| %>
+      <tr>
+        <td><%= system.s_name %></td>
+        <td><%= system.s_year %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
