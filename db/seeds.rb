@@ -22,3 +22,10 @@ user  =User.create(
     s_name:'microsoft',
     s_year: '1994'
   )
+  5.times do |i|
+    puts "syatem #{i+1}"
+    System.create(
+      s_name: "system #{i+1}",
+      s_year: "#{i+1994}",
+    )
+  end

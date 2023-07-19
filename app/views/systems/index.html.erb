@@ -5,10 +5,10 @@
   }
 
   th, td {
-    border: 2px solid green;
+    border: 2px solid red;
     padding: 8px;
   }
-
+ 
   th {
     background-color: lightgray;
   }
@@ -25,11 +25,12 @@
 <table>
   <thead>
     <tr>
-      <th>name</th>
-      <th>age</th>
+      <th>Name</th>
+      <th>DOC</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style="background-color: green;">
+    
     <% @systems.each do |system| %>
       <tr>
         <td><%= system.s_name %></td>

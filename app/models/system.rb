@@ -1,2 +1,4 @@
 class System < ApplicationRecord
-end
+    validates :s_name, :s_year, presence: true
+  end
+  

@@ -1,0 +1,22 @@
+<h1>This is a form</h1>
+<%= form_for @system do |f| %>
+  <% if @system.errors.any? %>
+    <% @system.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= f.label :s_name %><br>
+    <%= f.text_field :s_name %>
+  </div>
+
+  <div>
+    <%= f.label :s_year %><br>
+    <%= f.text_field :s_year %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+<% end %>
