@@ -1,5 +1,6 @@
 <h1>This is a form</h1>
-<%= form_for @system do |f| %>
+
+<%= form_for @system do |form| %>
   <% if @system.errors.any? %>
     <% @system.errors.full_messages.each do |message| %>
       <p><%= message %></p>
@@ -7,16 +8,16 @@
   <% end %>
 
   <div>
-    <%= f.label :s_name %><br>
-    <%= f.text_field :s_name %>
+    <%= form.label :s_name %><br>
+    <%= form.text_field :s_name %>
   </div>
 
   <div>
-    <%= f.label :s_year %><br>
-    <%= f.text_field :s_year %>
+    <%= form.label :s_year %><br>
+    <%= form.text_field :s_year %>
   </div>
 
   <div>
-    <%= f.submit %>
+    <%= form.submit %>
   </div>
 <% end %>

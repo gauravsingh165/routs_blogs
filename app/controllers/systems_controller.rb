@@ -6,6 +6,7 @@ class SystemsController < ApplicationController
   def new
     @system = System.new
   end
+  
 
   def create
     @system = System.new(system_params)
@@ -16,7 +17,10 @@ class SystemsController < ApplicationController
       render :new
     end
   end
-
+  def show 
+    @system =System.find(params[:id])
+ 
+   end 
   # ...
 
   private
