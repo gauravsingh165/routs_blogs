@@ -29,6 +29,7 @@
     <tr>
       <th>Name</th>
       <th>DOC</th>
+      <th>FAV_SYSTEM</th>
       <th colspan ="3">Action  </th>
     </tr>
   </thead>
@@ -38,8 +39,10 @@
       <tr>
         <td><%= system.s_name %></td>
         <td><%= system.s_year %></td>
+        <td><%= system.fav_system %></td>
         <td><%= link_to 'view',system%></td>
         <td><%= link_to 'edit',edit_system_path(system)%></td>
+        <td><%= link_to 'delete',system,method: :delete,data: {confirm: 'are you sure?'}%></td>
       </tr>
     <% end %>
   </tbody>

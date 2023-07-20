@@ -10,7 +10,7 @@ class SystemsController < ApplicationController
 
   def create
     @system = System.new(system_params)
-
+    @system.fav_system = params[:fav_system]
     if @system.save
       redirect_to @system, notice: 'System was successfully created.'
     else
@@ -25,6 +25,19 @@ class SystemsController < ApplicationController
    def edit
     @system =System.find(params[:id])
  
+   end
+   def update
+    @system = System.find(params[:id])
+    if @system.update(system_params)
+      redirect_to system_path(@system)
+    else
+      render :edit
+    end
+  end
+   def destroy
+
+
+
    end
   # ...
 

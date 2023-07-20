@@ -8,15 +8,26 @@
   <% end %>
 
   <div>
-    <%= form.label :s_name %><br>
+    <%= form.label :system_name %><br>
     <%= form.text_field :s_name %>
   </div>
 
   <div>
-    <%= form.label :s_year %><br>
+    <%= form.label :system_year %><br>
     <%= form.text_field :s_year %>
   </div>
-
+  
+  <h3>Select FAV_SYSTEM</h3>
+  <div>
+     <%= check_box_tag "fav_system[]", "apple" %>
+      Apple mac
+     <%= check_box_tag "fav_system[]", "android" %>
+      Android
+     <%= check_box_tag "fav_system[]", "linex" %>
+      Linex
+     <%= check_box_tag "fav_system[]", "Mircosoft" %>
+      Microsoft
+    </div> 
   <div>
     <%= form.submit %>
   </div>
