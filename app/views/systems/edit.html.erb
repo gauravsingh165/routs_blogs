@@ -16,6 +16,19 @@
     <%= form.label :s_year %><br>
     <%= form.text_field :s_year %>
   </div>
+  <div>
+    <%= check_box_tag "fav_system[]", "apple", @system.fav_system.include?("apple") %>
+    Apple mac
+
+    <%= check_box_tag "fav_system[]", "android", @system.fav_system.include?("android") %>
+    Android
+
+    <%= check_box_tag "fav_system[]", "linux", @system.fav_system.include?("linux") %>
+    Linux
+
+    <%= check_box_tag "fav_system[]", "microsoft", @system.fav_system.include?("microsoft") %>
+    Microsoft
+  </div>
 
   <div>
     <%= form.submit %>

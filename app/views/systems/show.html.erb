@@ -1,4 +1,6 @@
 <h1> Student details</h1>
 <p><strong>First Name: </strong><%= @system.s_name%></p>
 <p><strong>Age: </strong><%= @system.s_year%></p>
+<p><strong>FAV_SYSTEM: </strong><%= @system.fav_system%></p>
+
 <%= link_to 'back' ,systems_path %> | <td><%= link_to 'Edit', edit_system_path(@system) %></td>
