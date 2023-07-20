@@ -1,5 +1,5 @@
-<h1>This is a form</h1>
-<%= link_to 'not create' ,systems_path %>
+<h1 style="color: red;">This is a form  </h1>
+
 <%= form_for @system do |form| %>
   <% if @system.errors.any? %>
     <% @system.errors.full_messages.each do |message| %>
@@ -16,6 +16,10 @@
     <%= form.label :system_year %><br>
     <%= form.text_field :s_year %>
   </div>
+  <div>
+    <%= form.label :desciption %><br>
+    <%= form.text_field :desciption %>
+  </div>
   
   <h3>Select FAV_SYSTEM</h3>
   <div>
@@ -27,8 +31,9 @@
       Linex
      <%= check_box_tag "fav_system[]", "Mircosoft" %>
       Microsoft
-    </div> 
+    </div> <br>
   <div>
-    <%= form.submit %>
-  </div>
+    <%= form.submit %>  
+  </div><br>
 <% end %>
+  <%= link_to 'BACK' ,systems_path %>

@@ -1,19 +1,24 @@
-<h1>Listing Systems</h1><br>
-<%= link_to 'New System', new_system_path, style: "color: red;" %>
+<h1 style="text-align: center;">Listing Systems</h1><br>
+<%= link_to 'NEW SYSTEM ADD', new_system_path, style: "color: red; display: block; text-align: center;" %><br>
+
 
 <style>
   table {
     border-collapse: collapse;
+    margin: 0px; 
+    width: 100%; 
   }
 
   th, td {
-    border: 2px solid red;
-    padding: 8px;
+    border: 2px solid green;
+    padding: 15px;
+    text-align: center; /* Center the text inside cells */
   }
- 
+
   th {
     background-color: lightgray;
   }
+  
   h1 {
     color: blue;
   }
@@ -24,22 +29,24 @@
 </style>
 
 
-<table>
+<table style="margin: 0 auto;">
   <thead>
     <tr>
       <th>Name</th>
       <th>DOC</th>
       <th>FAV_SYSTEM</th>
+      <th>DESCRIPTION</th>
       <th colspan ="3">Action  </th>
     </tr>
   </thead>
-  <tbody style="background-color: green;">
+  <tbody style="background-color: #FBB917;">
     
     <% @systems.each do |system| %>
       <tr>
         <td><%= system.s_name %></td>
         <td><%= system.s_year %></td>
         <td><%= system.fav_system %></td>
+        <td><%= system.desciption %></td>
         <td><%= link_to 'view',system%></td>
         <td><%= link_to 'edit',edit_system_path(system)%></td>
         <td><%= link_to 'Destroy', destroy_system_path(system), data: { "turbo-method": :delete ,turbo_confirm: "Are you sure?"}%></td>

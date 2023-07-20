@@ -17,6 +17,10 @@
     <%= form.text_field :s_year %>
   </div>
   <div>
+    <%= form.label :desciption %><br>
+    <%= form.text_field :desciption %>
+  </div>
+  <div>
     <%= check_box_tag "fav_system[]", "apple", @system.fav_system.include?("apple") %>
     Apple mac
 
