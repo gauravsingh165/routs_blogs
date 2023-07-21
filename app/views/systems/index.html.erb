@@ -1,22 +1,22 @@
 <h1 style="text-align: center;">Listing Systems</h1><br>
-<%= link_to 'NEW SYSTEM ADD', new_system_path, style: "color: red; display: block; text-align: center;" %><br>
+<h2><%= link_to 'NEW SYSTEM ADD', new_system_path, style: "color: red; display: block; text-align: center;" %></h2><br>
 
 
 <style>
   table {
     border-collapse: collapse;
     margin: 0px; 
-    width: 100%; 
+    width: 70%; 
   }
 
   th, td {
     border: 2px solid black;
-    padding: 15px;
+    padding: 20px;
     text-align: center; 
   }
 
   th {
-    background-color: lightgray;
+    background-color: gray;
   }
   
   h1 {
@@ -40,7 +40,7 @@
       <th colspan ="3">Action  </th>
     </tr>
   </thead>
-  <tbody style="background-color: #FBB917;">
+  <tbody style="background-color: skyblue;">
     
     <% @systems.each do |system| %>
       <tr>
@@ -56,3 +56,4 @@
     <% end %>
   </tbody>
 </table>
+

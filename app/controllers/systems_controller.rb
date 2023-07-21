@@ -38,7 +38,7 @@ class SystemsController < ApplicationController
 
   def destroy
     @system.destroy
-    redirect_to systems_path
+    redirect_to systems_path, notice: 'System was successfully deleted.'
   end
 
   private

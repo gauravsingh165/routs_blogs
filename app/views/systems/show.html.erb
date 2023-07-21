@@ -1,7 +1,15 @@
-<h1> Student details</h1>
-<p><strong>First Name: </strong><%= @system.s_name%></p>
-<p><strong>Age: </strong><%= @system.s_year%></p>
-<p><strong>FAV_SYSTEM: </strong><%= @system.fav_system%></p>
-<p><strong>DESCRIPTION: </strong><%= @system.desciption%></p>
-<p><strong>FIELDS: </strong><%= @system.your_field%></p>
-<%= link_to 'back' ,systems_path %> | <td><%= link_to 'Edit', edit_system_path(@system) %></td>
+<h1 style="text-align: center;"> Student details</h1>
+<p style="text-align: center;"><strong>First Name: </strong><%= @system.s_name%></p>
+<p style="text-align: center;"><strong>Age: </strong><%= @system.s_year%></p>
+<p style="text-align: center;"><strong>FAV_SYSTEM: </strong><%= @system.fav_system%></p>
+<p style="text-align: center;"><strong>DESCRIPTION: </strong><%= @system.desciption%></p>
+<p style="text-align: center;"><strong>FIELDS: </strong><%= @system.your_field%></p>
+<div style="text-align: center;">
+<td >
+      <%= link_to 'DELETE', destroy_system_path(@system), method: :delete, style: 'color: red;', data: { confirm: "Are you sure?" } %>
+      </td>
+    </td>
+    <%= link_to 'BACK' ,systems_path %> 
+
+<td><%= link_to 'EDIT', edit_system_path(@system) %></td>
+</div>

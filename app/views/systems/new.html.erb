@@ -1,44 +1,49 @@
-<h1 style="color: red;">This is a form  </h1>
+<!-- app/views/systems/new.html.erb -->
 
-<%= form_for @system do |form| %>
-  <% if @system.errors.any? %>
-    <% @system.errors.full_messages.each do |message| %>
-      <p><%= message %></p>
-    <% end %>
-  <% end %>
+<h1 class="form-header" style="text-align: center;">This is a form</h1>
 
-  <div>
+<%= form_for @system, html: { class: 'form-container' } do |form| %>
+  <!-- ... Other form content ... -->
+
+  <div class="form-field">
     <%= form.label :system_name %><br>
     <%= form.text_field :s_name %>
   </div>
 
-  <div>
+  <div class="form-field">
     <%= form.label :system_year %><br>
     <%= form.text_field :s_year %>
   </div>
-  <div>
+
+  <div class="form-field">
     <%= form.label :desciption %><br>
     <%= form.text_field :desciption %>
   </div>
-  
-  <h3>Select FAV_SYSTEM</h3>
-  <div>
-     <%= check_box_tag "fav_system[]", "apple" %>
-      Apple mac
-     <%= check_box_tag "fav_system[]", "android" %>
-      Android
-     <%= check_box_tag "fav_system[]", "linex" %>
-      Linex
-     <%= check_box_tag "fav_system[]", "Mircosoft" %>
-      Microsoft
-    </div> <br>
-    <div>
-  <%= form.label :your_field, "Select multiple options:" %><br>
-  <%= form.select :your_field, options_for_select(["Option 1", "Option 2", "Option 3"], @system.your_field), {}, { multiple: true } %>
-</div>
 
-  <div>
-    <%= form.submit %>  
+  <h3>Select FAV_SYSTEM</h3>
+  <div class="form-field">
+    <label class="checkbox-label">
+      <%= check_box_tag "fav_system[]", "apple" %>Apple mac
+    </label>
+    <label class="checkbox-label">
+      <%= check_box_tag "fav_system[]", "android" %>Android
+    </label>
+    <label class="checkbox-label">
+      <%= check_box_tag "fav_system[]", "linex" %> Linex
+    </label>
+    <label class="checkbox-label">
+      <%= check_box_tag "fav_system[]", "Mircosoft" %>  Microsoft
+    </label>
+  </div> <br>
+
+  <div class="form-field">
+    <%= form.label :your_field, "Select multiple options:" %><br>
+    <%= form.select :your_field, ['Option 1', 'Option 2', 'Option 3','Option 4', 'Option 5', 'Option 6','Option 7', 'Option 8', 'Option 9','Option 10', 'Option 11', 'Option 12'], {}, { multiple: true } %>
   </div><br>
+
+  <div class="form-field">
+    <%= form.submit 'Submit', class: 'form-submit' %>
+  </div>
 <% end %>
-  <%= link_to 'BACK' ,systems_path %>
+
+<%= link_to 'BACK', systems_path, style: 'color: blue;' %>
