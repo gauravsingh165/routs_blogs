@@ -10,6 +10,7 @@ class SystemsController < ApplicationController
   end
 
   def create
+   
     @system = System.new(system_params)
     @system.fav_system = params[:fav_system]
 
@@ -28,7 +29,6 @@ class SystemsController < ApplicationController
 
   def update
     @system.fav_system = params[:fav_system] 
-
     if @system.update(system_params)
       redirect_to system_path(@system)
     else
@@ -44,7 +44,7 @@ class SystemsController < ApplicationController
   private
 
   def system_params
-    params.require(:system).permit(:s_name, :s_year,:desciption)
+    params.require(:system).permit(:s_name, :s_year,:desciption,your_field: [])
   end
 
   def set_system

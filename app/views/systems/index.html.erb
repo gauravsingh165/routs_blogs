@@ -10,9 +10,9 @@
   }
 
   th, td {
-    border: 2px solid green;
+    border: 2px solid black;
     padding: 15px;
-    text-align: center; /* Center the text inside cells */
+    text-align: center; 
   }
 
   th {
@@ -36,6 +36,7 @@
       <th>DOC</th>
       <th>FAV_SYSTEM</th>
       <th>DESCRIPTION</th>
+      <th>FIELDS</th>
       <th colspan ="3">Action  </th>
     </tr>
   </thead>
@@ -47,9 +48,10 @@
         <td><%= system.s_year %></td>
         <td><%= system.fav_system %></td>
         <td><%= system.desciption %></td>
-        <td><%= link_to 'view',system%></td>
-        <td><%= link_to 'edit',edit_system_path(system)%></td>
-        <td><%= link_to 'Destroy', destroy_system_path(system), data: { "turbo-method": :delete ,turbo_confirm: "Are you sure?"}%></td>
+        <td><%= system.your_field.reject(&:blank?) %></td>
+        <td><%= link_to 'VIEW', system, style: 'color: green;' %></td>
+        <td><%= link_to 'EDIT', edit_system_path(system), style: 'color: blue;' %></td>
+        <td><%= link_to 'DELETE', destroy_system_path(system), style: 'color: red;', data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %></td>
       </tr>
     <% end %>
   </tbody>

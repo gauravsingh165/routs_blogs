@@ -33,6 +33,10 @@
     <%= check_box_tag "fav_system[]", "microsoft", @system.fav_system.include?("microsoft") %>
     Microsoft
   </div>
+   <div>
+  <%= form.label :your_field, "Select multiple options:" %><br>
+  <%= form.select :your_field, options_for_select(["Option 1", "Option 2", "Option 3"], @system.your_field), {}, { multiple: true } %>
+</div>
 
   <div>
     <%= form.submit %>
