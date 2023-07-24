@@ -1,15 +1,5 @@
-<%= form_with model: @myusers do |form| %>
-  <div>
-    <%= form.label :Username %><br>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :User_Email %><br>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.submit "Create Myuser" %>
-  </div>
+<%= form_tag("/myusers/create", :method => "post") do %>
+   <%= text_field_tag(:name) %>
+   <%= email_field_tag(:email) %>
+   <%= submit_tag("Submit") %>
 <% end %>

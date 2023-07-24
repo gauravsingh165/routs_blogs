@@ -1,17 +1,15 @@
 <h1 style="text-align: center; color: blue;">Listing Systems</h1><br>
 <h2 style="text-align: center;"><%= link_to 'NEW SYSTEM ADD', new_system_path, style: "color: red; display: block; text-align: center;" %></h2><br>
 
-<table style="border-collapse: collapse; margin: 0 auto; width: 70%;">
+<table style="border-collapse: collapse; margin: 0 auto; width: 100%;">
   <thead>
     <tr>
-      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">Name</th>
-      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">DOC</th>
-      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">FAV_SYSTEM</th>
-      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">DESCRIPTION</th>
-      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">FIELDS</th>
-      <th style="border: 2px solid black; padding: 20px; text-align: center;">Action</th>
-      <th style="border: 2px solid black; padding: 20px; text-align: center;">Action</th>
-      <th style="border: 2px solid black; padding: 20px; text-align: center;">Action</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center; background-color: gray;">Name</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center; background-color: gray;">DOC</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center; background-color: gray;">FAV_SYSTEM</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center; background-color: gray;">DESCRIPTION</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center; background-color: gray;">FIELDS</th>
+      <th colspan="3" style="border: 2px solid black; padding: 20px; text-align: center; background-color: gray;">Action</th>
     </tr>
   </thead>
   <tbody style="background-color: skyblue;">
@@ -31,3 +29,4 @@
     <% end %>
   </tbody>
 </table>
+

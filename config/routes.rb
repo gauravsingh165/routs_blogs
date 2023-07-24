@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   # get '/myusers', to: 'myusers#index'
    get '/myuser', to: 'myusers#index'
    get '/myuser/new', to: 'myusers#new'
-     resources :myusers
+   post '/users/create', to: 'users#create'
+
+
+    #  resources :myusers
 end
