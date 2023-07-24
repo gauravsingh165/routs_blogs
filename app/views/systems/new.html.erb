@@ -1,49 +1,47 @@
-<!-- app/views/systems/new.html.erb -->
-
-<h1 class="form-header" style="text-align: center;">This is a form</h1>
+<h1 class="form-header" style="text-align: center; color: #007bff;">This is a form</h1>
 
 <%= form_for @system, html: { class: 'form-container' } do |form| %>
   <!-- ... Other form content ... -->
 
-  <div class="form-field">
+  <div class="form-field" style="margin-bottom: 10px;">
     <%= form.label :system_name %><br>
-    <%= form.text_field :s_name %>
+    <%= form.text_field :s_name, style: "width: 100%; padding: 5px; border: 1px solid #ccc;" %>
   </div>
 
-  <div class="form-field">
+  <div class="form-field" style="margin-bottom: 10px;">
     <%= form.label :system_year %><br>
-    <%= form.text_field :s_year %>
+    <%= form.text_field :s_year, style: "width: 100%; padding: 5px; border: 1px solid #ccc;" %>
   </div>
 
-  <div class="form-field">
+  <div class="form-field" style="margin-bottom: 10px;">
     <%= form.label :desciption %><br>
-    <%= form.text_field :desciption %>
+    <%= form.text_field :desciption, style: "width: 100%; padding: 5px; border: 1px solid #ccc;" %>
   </div>
 
-  <h3>Select FAV_SYSTEM</h3>
-  <div class="form-field">
-    <label class="checkbox-label">
+  <h3 style="color: #007bff;">Select FAV_SYSTEM</h3>
+  <div class="form-field" style="margin-bottom: 10px;">
+    <label class="checkbox-label" style="margin-right: 20px;">
       <%= check_box_tag "fav_system[]", "apple" %>Apple mac
     </label>
-    <label class="checkbox-label">
+    <label class="checkbox-label" style="margin-right: 20px;">
       <%= check_box_tag "fav_system[]", "android" %>Android
     </label>
-    <label class="checkbox-label">
+    <label class="checkbox-label" style="margin-right: 20px;">
       <%= check_box_tag "fav_system[]", "linex" %> Linex
     </label>
     <label class="checkbox-label">
-      <%= check_box_tag "fav_system[]", "Mircosoft" %>  Microsoft
+      <%= check_box_tag "fav_system[]", "Mircosoft" %> Microsoft
     </label>
   </div> <br>
 
-  <div class="form-field">
-    <%= form.label :your_field, "Select multiple options:" %><br>
-    <%= form.select :your_field, ['Option 1', 'Option 2', 'Option 3','Option 4', 'Option 5', 'Option 6','Option 7', 'Option 8', 'Option 9','Option 10', 'Option 11', 'Option 12'], {}, { multiple: true } %>
+  <div class="form-field" style="margin-bottom: 10px;">
+    <%= form.label :your_field, "Select multiple options:", style: "color: #007bff;" %><br>
+    <%= form.select :your_field, ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5', 'Option 6', 'Option 7', 'Option 8', 'Option 9', 'Option 10', 'Option 11', 'Option 12'], {}, { multiple: true, style: "width: 100%; padding: 5px; border: 1px solid #ccc;" } %>
   </div><br>
 
   <div class="form-field">
-    <%= form.submit 'Submit', class: 'form-submit' %>
+    <%= form.submit 'Submit', class: 'form-submit', style: "background-color: #007bff; color: white; padding: 8px; border: none; border-radius: 4px; cursor: pointer;" %>
   </div>
 <% end %>
 
-<%= link_to 'BACK', systems_path, style: 'color: blue;' %>
+<%= link_to 'BACK', systems_path, style: "text-decoration: none; color: #007bff;" %>

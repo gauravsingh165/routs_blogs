@@ -1,0 +1,3 @@
+class Myuser < ApplicationRecord
+    
+end

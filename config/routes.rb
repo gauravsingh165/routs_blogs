@@ -8,4 +8,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # get '/myusers', to: 'myusers#index'
+   get '/myuser', to: 'myusers#index'
+   get '/myuser/new', to: 'myusers#new'
+     resources :myusers
 end

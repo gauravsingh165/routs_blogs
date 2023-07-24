@@ -1,25 +1,27 @@
-<h1>This is a edit form</h1>
+<h1 style="text-align: center;">This is an edit form</h1>
 
 <%= form_with model: @system do |form| %>
   <% if @system.errors.any? %>
     <% @system.errors.full_messages.each do |message| %>
-      <p><%= message %></p>
+      <p style="color: red;"><%= message %></p>
     <% end %>
   <% end %>
 
   <div>
     <%= form.label :s_name %><br>
-    <%= form.text_field :s_name %>
+    <%= form.text_field :s_name, style: "width: 100%;" %>
   </div>
 
   <div>
     <%= form.label :s_year %><br>
-    <%= form.text_field :s_year %>
+    <%= form.text_field :s_year, style: "width: 100%;" %>
   </div>
+
   <div>
     <%= form.label :desciption %><br>
-    <%= form.text_field :desciption %>
+    <%= form.text_field :desciption, style: "width: 100%;" %>
   </div>
+
   <div>
     <%= check_box_tag "fav_system[]", "apple", @system.fav_system.include?("apple") %>
     Apple mac
@@ -33,13 +35,15 @@
     <%= check_box_tag "fav_system[]", "microsoft", @system.fav_system.include?("microsoft") %>
     Microsoft
   </div>
-   <div>
-  <%= form.label :your_field, "Select multiple options:" %><br>
-  <%= form.select :your_field, options_for_select(["Option 1", "Option 2", "Option 3"], @system.your_field), {}, { multiple: true } %>
-</div>
 
   <div>
-    <%= form.submit %>
+    <%= form.label :your_field, "Select multiple options:" %><br>
+    <%= form.select :your_field, options_for_select(["Option 1", "Option 2", "Option 3"], @system.your_field), {}, { style: "width: 100%;", multiple: true } %>
+  </div>
+
+  <div>
+    <%= form.submit style: "background-color: #007bff; color: white; padding: 8px; border: none; border-radius: 4px; cursor: pointer;" %>
   </div>
 <% end %>
-<%= link_to 'BACK' ,systems_path %>
+
+<%= link_to 'BACK', systems_path, style: "text-decoration: none; color: white; background-color: #007bff; padding: 8px; border-radius: 4px;" %>

@@ -1,59 +1,33 @@
-<h1 style="text-align: center;">Listing Systems</h1><br>
-<h2><%= link_to 'NEW SYSTEM ADD', new_system_path, style: "color: red; display: block; text-align: center;" %></h2><br>
+<h1 style="text-align: center; color: blue;">Listing Systems</h1><br>
+<h2 style="text-align: center;"><%= link_to 'NEW SYSTEM ADD', new_system_path, style: "color: red; display: block; text-align: center;" %></h2><br>
 
-
-<style>
-  table {
-    border-collapse: collapse;
-    margin: 0px; 
-    width: 70%; 
-  }
-
-  th, td {
-    border: 2px solid black;
-    padding: 20px;
-    text-align: center; 
-  }
-
-  th {
-    background-color: gray;
-  }
-  
-  h1 {
-    color: blue;
-  }
-
-  p {
-    color: red;
-  }
-</style>
-
-
-<table style="margin: 0 auto;">
+<table style="border-collapse: collapse; margin: 0 auto; width: 70%;">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>DOC</th>
-      <th>FAV_SYSTEM</th>
-      <th>DESCRIPTION</th>
-      <th>FIELDS</th>
-      <th colspan ="3">Action  </th>
+      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">Name</th>
+      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">DOC</th>
+      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">FAV_SYSTEM</th>
+      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">DESCRIPTION</th>
+      <th style="border: 2px solid black; padding: 20px; background-color: gray; text-align: center;">FIELDS</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center;">Action</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center;">Action</th>
+      <th style="border: 2px solid black; padding: 20px; text-align: center;">Action</th>
     </tr>
   </thead>
   <tbody style="background-color: skyblue;">
-    
     <% @systems.each do |system| %>
       <tr>
-        <td><%= system.s_name %></td>
-        <td><%= system.s_year %></td>
-        <td><%= system.fav_system %></td>
-        <td><%= system.desciption %></td>
-        <td><%= system.your_field.reject(&:blank?) %></td>
-        <td><%= link_to 'VIEW', system, style: 'color: green;' %></td>
-        <td><%= link_to 'EDIT', edit_system_path(system), style: 'color: blue;' %></td>
-        <td><%= link_to 'DELETE', destroy_system_path(system), style: 'color: red;', data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= system.s_name %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= system.s_year %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= system.fav_system %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= system.desciption %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= system.your_field.reject(&:blank?) %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= link_to 'VIEW', system, style: 'color: green;' %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;"><%= link_to 'EDIT', edit_system_path(system), style: 'color: blue;' %></td>
+        <td style="border: 2px solid black; padding: 20px; text-align: center;">
+          <%= link_to 'DELETE', destroy_system_path(system), style: 'color: red;', data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
