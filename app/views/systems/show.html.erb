@@ -61,7 +61,7 @@
   <p><strong>Description: </strong><%= @system.desciption %></p>
   <p><strong>Fields: </strong><%= @system.your_field %></p>
   <div class="actions">
-    <%= link_to 'DELETE', destroy_system_path(@system), method: :delete, class: 'delete-link', data: { confirm: "Are you sure?" } %>
+    <%= link_to 'DELETE', destroy_system_path(@system), style: 'color: red;', data: { "turbo-method": :delete, turbo_confirm: "Are you sure?" } %>
     <%= link_to 'EDIT', edit_system_path(@system), class: 'edit-link' %>
     <%= link_to 'BACK', systems_path, class: 'back-link' %>
   </div>

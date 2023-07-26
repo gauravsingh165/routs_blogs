@@ -9,10 +9,15 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # get '/myusers', to: 'myusers#index'
-   get '/myuser', to: 'myusers#index'
-   get '/myuser/new', to: 'myusers#new'
-   post '/users/create', to: 'users#create'
+   get '/myusers', to: 'myusers#index'
+   get '/myusers/new', to: 'myusers#new'
+   post '/myusers/create', to: 'myusers#create'
 
+   get '/myusers/:id', to: 'myusers#view'
+   get '/myusers/edit/:id', to: 'myusers#edit'
+   post '/myusers/update/:id', to: 'myusers#update'
+   get '/myusers/delete/:id', to:'myusers#destroy'
+ 
 
     #  resources :myusers
 end

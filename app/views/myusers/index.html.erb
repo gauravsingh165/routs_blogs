@@ -21,11 +21,23 @@
   <tr>
     <th>Name</th>
     <th>Email</th>
+     <th>Information</th>
+     <th> Edit </th>
+     <th>Delete</th>
   </tr>
   <% @myusers.each do |user| %>
     <tr>
       <td><%= user.name %></td>
       <td><%= user.email %></td>
+
+
+  <td><%= link_to "View", "/myusers/#{user.id}" %> </td>
+  
+  <td><%= link_to "Edit", "/myusers/edit/#{user.id}" %> </td>
+
+  <td><%= link_to "Delete", "/myusers/delete/#{user.id}" %> </td>
+
+
     </tr>
   <% end %>
 </table>
